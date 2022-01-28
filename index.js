@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener("click", function(e) {
-    const createdList = document.getElementById(`${e.target.dataset.id}`)
-
-    if(e.target.matches("#delete-btn")) {
+    let id = e.target.id.slice(4)
+    const createdList = document.getElementById(`${e.target.id}`)
+    if(e.target.matches(`#del-${id}`)) {
       e.preventDefault()
-      deleteList(e.target.dataset.id)
-      createdList.remove(createdList)
+      deleteList(id)
+      createdList.parentElement.remove(createdList)
     }
 })
 
