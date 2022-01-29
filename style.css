@@ -1,0 +1,12 @@
+.form-container, #list-container {
+  display: flex;
+  justify-content: center;
+}
+
+#list-container {
+  flex-direction: column;
+}
+
+.list-item {
+  align-self: center;
+}
